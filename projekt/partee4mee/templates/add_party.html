@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block page %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center mt-3">
+        <h1>Create new event</h1>
+        </div>
+        <div class="col-12 col-md-8 offset-md-2">
+            <form method='POST'>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary mb-2 mt-3 offset-3" style="width: 50%">Add event</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing:border-box;
+
+}
+
+
+
+body{
+	background-color: #f8f9fa !important;
+	cursor: default;
+}
+
+.container{
+	height: 83vh;
+}
+/* navbar */
+
+.logo_text_endwith{
+	color: white;
+}
+.span_underline_logo{
+	text-decoration: underline;
+	color:#007bff;
+	z-index: 10;
+	position: relative;
+
+}
+.logo_underline{
+	color:#007bff 
+}
+
+
+.margin_signin{
+	margin-top: 11rem;
+}
+
+/* }
+.margin_register{
+    margin-top: 100px;
+
+} */
+
+/* .form-register{
+	margin-top: 1.5rem;
+} */
+
+.login-form{
+    margin-top: 1.5rem;
+}
+
+.nav-link{
+	font-family: 'Padauk', sans-serif;
+}

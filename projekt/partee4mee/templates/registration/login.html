@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block page %}
+
+    {% comment %} {% if form.errors %}
+    <p>
+        The name of user or password are incorrect
+        Please, try again.
+    </p>
+    {% else %}
+    <p> Please, fill below forms to login:</p> 
+    {% endif %} {% endcomment %}
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-6 offset-md-3 text-center shadow p-4 margin_signin">
+                <h1 class="mb-2"> Sign in </h1>
+                <p class="text-secondary"> Let's start the party...</p>
+                        
+                <div class= "login-form">
+                    <form method = "POST">
+                        {% csrf_token %}
+                        {{form|crispy}}
+                        {% comment %} <input type = "hidden" name ="next" value ="{{next}}"/> {% endcomment %}
+                        {% comment %} <a href="{% url "add_event" %}" class="btn btn-primary" type="submit">Log in </a> {% endcomment %}
+                        <button type="submit" class="btn btn-block btn-primary p-3 mt-4"><strong>Login</strong></button>
+                        {% comment %} <button type="submit"><a href="{% url "add_event" %}">Log in </a></button> {% endcomment %}
+                    </form>
+                </div>
+            
+            
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+

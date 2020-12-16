@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block register_user %}
+
+
+<div class="container">
+    <div class="row text-center" style="margin-top: 7%">
+
+        <div class="col-12 col-md-8 offset-md-2 p-4 shadow-lg">
+            <h1>Register your account</h1>
+            <p class="text-secondary mt-2"> Let's start the party...</p>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success col-12 mt-5 p-5 text-center" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                <a href="{% url 'login' %}" class = "btn btn-primary text-center">Log in to your account</a>
+
+            {% else %}
+
+            <form method='POST'>
+                {% csrf_token %}
+                {{ user_form|crispy }}
+                <button type="submit" class = "btn btn-primary">Register</button>
+            </form>
+
+            {% endif %}
+    
+        
+        </div>
+    </div>
+</div>
+    
+
+{% endblock %}
+
+
+
+

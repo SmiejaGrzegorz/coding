@@ -1,0 +1,49 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing:border-box;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+	cursor: default;
+}
+
+/* navbar */
+
+.logo_text_endwith{
+	color: white;
+}
+.span_underline_logo{
+	text-decoration: underline;
+	color:#007bff;
+	z-index: 10;
+	position: relative;
+
+}
+.logo_underline{
+	color:#007bff 
+}
+
+
+.min_height_div{
+	min-height: 87vh;
+}
+/* navbar */
+
+.navbar_bg{
+	background-color: #89cff0
+}
+
+.footer {
+	height: 5vh;
+	background-color: black;
+}
+
+.footer p{
+	color: white;
+}
+
+.nav-link{
+	font-family: 'Padauk', sans-serif;
+}
